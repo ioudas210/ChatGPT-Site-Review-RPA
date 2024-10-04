@@ -1,0 +1,176 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ChatGPT" this:ChatGPT.producttext="LABRADOR EXTRA 50EC CIECH" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="producttext" Type="InArgument(x:String)" />
+    <x:Property Name="returntext" Type="InOutArgument(x:String)" />
+    <x:Property Name="url" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>ChatGPT_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ChatGPT" sap:VirtualizedContainerService.HintSize="1913.6000000000001,1069.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome: ChatGPT" sap:VirtualizedContainerService.HintSize="449.6,1046.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="dabbcbc3-0beb-4f49-9bd3-ecf647570388" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="416,806.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'P'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="dabbcbc3-0beb-4f49-9bd3-ecf647570388" Text="[&quot;can you write a 1 paragraph review Of this product name? can you shortly review this product In german For Me As If you're the customer? &quot; + producttext  +&quot;from  &quot; + url]" Version="V4">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://chatgpt.com/" CVScreenId="113596ab-3898-499d-a54c-be815f30a9f9" CvElementArea="711, 955, 774, 53" CvType="InputBox" DesignTimeRectangle="766, 970, 666, 24" DesignTimeScaleFactor="1" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='placeholder' aaname='' /&gt;" Guid="bc28e103-e60d-4382-a66e-2aa7b32fde76" InformativeScreenshot="1bad1b524323be23ce59dd2bdd2e5338.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="730, 970, 24, 24" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl type='' tag='svg' class='' aaname='' /&gt;" Guid="da9c4a0b-1a4a-46ce-b919-38a490b08462" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NTypeInto.Target>
+            </uix:NTypeInto>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'SVG'" sap:VirtualizedContainerService.HintSize="382.4,189.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="dabbcbc3-0beb-4f49-9bd3-ecf647570388" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://chatgpt.com/c/66feead8-55fc-8004-ab87-8a66f0ef1dee" CVScreenId="effcce98-5e33-4c70-a11e-b7644ac4626c" CvElementArea="1437, 962, 38, 39" CvType="Icon" DesignTimeRectangle="1440, 966, 32, 32" DesignTimeScaleFactor="1" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl type='' tag='svg' class='icon-2xl' aaname='' /&gt;" Guid="16f6e332-8d78-4c38-b867-92a116713604" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACQAAAAkCAYAAADhAJiYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMGSURBVFhH1Zg7TypRFIWp8BHUAELjo1HEggQDAbUy9MZoZ2VjbIiJCf+ACnvDbzDY+Ddo0EBnYcAYtTDyCp2PfbNOGO7ALMZhGG+8J/mS8czZe61w5jzcrk6nI7+J/9/Q29ubFAoFOTw8lGg0KouLizI1NSXT09OytLQkGxsb6t3V1ZU0Gg2awwzLhh4fH+Xs7Ew8Ho+4XC5LzM3NqRjEspyMbw3V63XJ5XLi9XqpqBUQe35+rnIxDT2mhp6fn2VnZ4eK2GF3d1flZFoaQw3d3NzI2toaTTwO4XBYSqUS1QTUUK1Wk9XVVZrQCUKhkFSrVYMuMBjCytjc3KSJnGR7e5uuQoOhbDZLE/wE0BrU7zOEn3FmZoYGm7G/vy97e3v0nRmzs7OGqeszdHx8TAPNODg4kPf3dwWe2RgzoKn30DP09PQkbrebBg0DO/LHx4doDc/oY2OHMTExobQNhi4vL2nAMI6OjuTr66tr5W9DH96xmGFA22BolOlKp9NdeVHfgNawXWjt5OSExjL009YzlEgk6OBBTk9Pu5IilUpF4vF49y+RWCym+rSGsSzHINA2GFpeXqaD9ayvr3elRG5vb8Xn86kNVGt49vv9Ui6Xuz2iYlguPdA2GMLHxQbrwendarWUGQijb9AQ+gKBgPqlms1mb5wZ0LZliIFjQGt2jxtqyMqUMZwwRKfM6kc9iBOG6EdtZ5cGThiiy37UjVHDCUPX19dGQ9i+7XzY4xrCcaW/2vYMATvTFgwG5fPzU51jWO5sjBn66QJ9hu7v72VycpIGmoHLFnZp9s4MaJlePwDOKRb8E2QymT5tYDCE/woikQhN4CTJZFJeX1/7tIHBELi7u5OFhQWayAlWVlbUzYBpU0OgWCyqKyZLOA7z8/Pq8GWaYKgh8PDwIFtbWzSxHVKplMrJtDRMDYF2uy35fF4tbyZiBWwHFxcXKhfT0POtIY2Xlxe1KkYtNiAGsSwnw7IhDZRjUGrBZR6lF5RgUIpBSQalGZRo8A4lmx8tx/wrfpmhjvwBh15TWte9qL8AAAAASUVORK5CYII=" InformativeScreenshot="3056131e2b8eeab66248a7aede57291b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Produktbewertung Metazanex 500 SC' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="714, 884, 768, 124" ElementType="InputBox" FuzzySelectorArgument="&lt;webctrl type='' class='text-base px-3 md:px-4 m-auto w-full md:px-5 lg:px-4 xl:px-5' tag='DIV' aaname='' /&gt;" Guid="5ca763ae-b0a5-4b86-897f-aa511bc794c4" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <Delay Duration="00:00:10" sap:VirtualizedContainerService.HintSize="382.4,122.4" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <uix:NGetText DisplayName="Get Text 'Ich habe Metazanex 500 …'" sap:VirtualizedContainerService.HintSize="382.4,182.4" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="dabbcbc3-0beb-4f49-9bd3-ecf647570388" TextString="[returntext]" Version="V4">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://chatgpt.com/c/66fef110-91d0-8008-b6ff-f99fe95c9b85" DesignTimeRectangle="1081, 1075, 712, 168" DesignTimeScaleFactor="1" ElementType="Text" FuzzySelectorArgument="&lt;webctrl type='' tag='P' class='' /&gt;" Guid="59e00a77-4ab8-4f49-8179-8f564af61373" InformativeScreenshot="ca0ff77fa674f1abf022871c00cbee7c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Hello Assistance Request' /&gt;" SearchSteps="FuzzySelector" Version="V4" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="9dabffc0-444f-4a12-a0aa-59504723363a" CvElementArea="1031, 1354, 772, 54" CvType="InputBox" DesignTimeRectangle="1085, 1369, 666, 24" FuzzySelectorArgument="&lt;webctrl parentid='prompt-textarea' tag='P' type='' class='placeholder' aaname='' /&gt;" Guid="6e2cf1b4-ba78-4a1a-8378-97a78ac7a16a" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="3432, -8, 1936, 1048" BrowserType="Chrome" IconBase64="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" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="cdf42d608be06da9a26539e8f292d801.jpg" Selector="&lt;html app='chrome.exe' title='ChatGPT' /&gt;" Title="ChatGPT" Url="https://chatgpt.com/c/66fef110-91d0-8008-b6ff-f99fe95c9b85" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
